@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Audio Example</title>
+</head>
+<body>
+
+    <video width="320" height="240" control id="video">
+        <source src="movie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+<br />
+      <audio src="1.mp3" id="audio1"></audio>
+      <audio src="2.mp3" id="audio2"></audio>
+
+      <script>
+        videoElement = document.getElementById("video");
+        audio1Element = document.getElementById("audio1");
+        audio2Element = document.getElementById("audio2");
+
+        function playFull()
+        {
+            audio1Element.volume = 0.5;
+            audio2Element.volume = 1;
+            videoElement.play();
+            audio1Element.play();
+            audio2Element.play();
+        }
+
+        function playVoice()
+        {
+            audio1Element.volume = 0.2;
+            audio2Element.volume = 1;
+            videoElement.play();
+            audio1Element.play();
+            audio2Element.play();
+        }
+
+        function playMusic()
+        {
+            audio1Element.volume = 0.7;
+            audio2Element.volume = 0.8;
+            videoElement.play();
+            audio1Element.play();
+            audio2Element.play();
+        }
+     </script>
+
+<button onclick="playFull()">Reproducir 100%</button>
+<button onclick="playVoice()">Reproducir más voz</button>
+<button onclick="playMusic()">Reproducir más música</button>
+
+</body>
+</html>
